@@ -12,10 +12,10 @@ class product extends Model
     protected $fillable = [
         'name',
         'category_id',
-        'image_id',
+        // 'image_id',
     ];
-    public function product()
+    public function images()
     {
-        return $this->belongsTo(category::class);
+        return $this->morphMany(Image::class, 'imageable');
     }
 }

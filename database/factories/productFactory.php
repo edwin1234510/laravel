@@ -22,7 +22,7 @@ class productFactory extends Factory
         return [
         'name'=> fake()->word(),
         'category_id'=> category::all()->random()->id,
-        'image_id' => image::factory()->create()->id,
+        // 'image_id' => image::factory()->create()->id,
         // 'image_id' => images::all()->random()->id,
         ];
     }
